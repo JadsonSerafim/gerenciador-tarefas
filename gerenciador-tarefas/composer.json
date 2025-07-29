@@ -1,0 +1,14 @@
+{
+    "name": "jadso/gerenciador-tarefas",
+    "description": "Gerenciador de Tarefas",
+    "type": "project",
+    "version": "1.0.0",
+    "require": {
+        "bramus/router": "^1.6"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,35 @@
+      body {
+            min-height: 100vh;
+            display: flex;
+        }
+
+        .sidebar {
+            width: 250px;
+            background-color: #343a40;
+            color: rgb(204, 204, 204);
+        }
+
+        .sidebar a {
+            color: rgb(216, 216, 216);
+            text-decoration: none;
+            display: block;
+            padding: 1rem;
+        }
+
+        .sidebar a:hover {
+            background-color: #364350;
+        }
+
+        .content {
+            flex: 1;
+            padding: 2rem;
+        }
+        .bordbottom {
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .bgCard {
+            background-color: #46607a;
+            color: #fff;
+        }
