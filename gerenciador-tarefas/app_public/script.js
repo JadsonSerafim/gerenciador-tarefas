@@ -72,7 +72,7 @@ $(document).ready(function() {
             },
                 error: function(xhr, status, error) {
             //    console.error('Erro ao atualizar a tarefa:', error);
-                alert('Não foi possível concluir a tarefa.', xhr);
+                alert('Não foi possível receber as tarefas concluidas.', xhr);
             }
         });
     });
@@ -125,7 +125,7 @@ $('#ContainerTarefas').on('click', '.remover', function(event){
             },
             error: function(xhr,status,error){
                  //    console.error('Erro ao atualizar a tarefa:', error);
-                alert('Não foi possível concluir a tarefa, ocorreu o erro', xhr);
+                alert('Não foi possível remover a tarefa, ocorreu o erro', xhr);
             }
         });
     });
