@@ -11,15 +11,16 @@ $(document).ready(function() {
             success: function(data) {
                 // Limpa o container antes de adicionar as novas tarefas
                 $('#ContainerTarefas').empty();
+                $('#titulo-secao').empty();
 
                 if(!$('#text-pendente').length){
-                        $('#content').append(
+                        $('#titulo-secao').append(
                     '<h1 id="text-pendente" class="text-white bordbottom">Tarefas pendentes</h1>'
                 )};
                 $.each(data, function(index, tarefa) {
                     $('#ContainerTarefas').append(
                         '<div class="col-sm-6 mb-3 mb-sm-0">' +
-                        '<div class="card shadow rounded-4 border-0">' +
+                        '<div class="card shadow rounded-4 border-0 p-2 mt-4">' + // Adiciona espaçamento no topo com mt-4
                         '<div class="card-body ">' +
                         '<h5 class="card-title text-primary fw-bold">' + tarefa.titulo + '</h5>' +
                         '<hr class="my-2"></hr>' +
@@ -30,7 +31,6 @@ $(document).ready(function() {
                         '</div>' +
                         '</div>' +
                         '</div>'
-                      
                     );
                }); 
             },
@@ -48,20 +48,22 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(data) {
              $('#ContainerTarefas').empty();
+            $('#titulo-secao').empty();
+
              if(!$('#text-pendente').length){
-          $('#content').append(
-         '<h1 id="text-pendente" class="text-white bordbottom">Tarefas concluidas</h1>'
+                      $('#titulo-secao').append(
+                     '<h1 id="text-pendente" class="text-white bordbottom">Tarefas concluidas</h1>'
                 )}
                 $.each(data, function(index, tarefa) {
                     $('#ContainerTarefas').append(
-                        '<div class="col-sm-6 mb-3 mb-sm-0">' +
-                        '<div class="card shadow rounded-4 border-0">' +
+                        '<div class="col-sm-6 mb-3 mb-sm-0 p-1">' +
+                        '<div class="card shadow rounded-4 border-0  mt-3"">' +
                         '<div class="card-body bg-danger ">' +
                         '<h5 class="card-title text-white fw-bold">' + tarefa.titulo + '</h5>' +
                         '<hr class="my-2"></hr>' +
                         '<p class="card-text mt-3">' + tarefa.descricao + '</p>' + 
                         '<p class="card-text">'+ 'Concluida em: ' + tarefa.dataConclusao + '</p>' + 
-                        '<button  class="btn btn-danger m-2 remover" data-id="' + tarefa.id + '">Deletar</button>' +
+                        '<button  class="btn btn-danger text-white m-2 remover " data-id="' + tarefa.id + '">Deletar</button>' +
                         '</div>' +
                         '</div>' +
                         '</div>'
@@ -72,7 +74,7 @@ $(document).ready(function() {
             },
                 error: function(xhr, status, error) {
             //    console.error('Erro ao atualizar a tarefa:', error);
-                alert('Não foi possível receber as tarefas concluidas.', xhr);
+                alert('Não foi possível concluir a tarefa.', xhr);
             }
         });
     });
@@ -125,7 +127,7 @@ $('#ContainerTarefas').on('click', '.remover', function(event){
             },
             error: function(xhr,status,error){
                  //    console.error('Erro ao atualizar a tarefa:', error);
-                alert('Não foi possível remover a tarefa, ocorreu o erro', xhr);
+                alert('Não foi possível concluir a tarefa, ocorreu o erro', xhr);
             }
         });
     });

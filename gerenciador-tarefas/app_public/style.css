@@ -25,11 +25,14 @@
             padding: 2rem;
         }
         .bordbottom {
-            border-bottom: 1px solid #ccc;
+            border-bottom: 1px solid #050202;
             padding-bottom: 1rem;
             margin-bottom: 1rem;
         }
         .bgCard {
             background-color: #46607a;
             color: #fff;
+        }
+        .btn-danger:hover {
+            background-color: #01070f;
         }
