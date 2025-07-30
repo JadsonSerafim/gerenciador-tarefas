@@ -72,8 +72,8 @@ Siga os passos abaixo para rodar o projeto localmente:
         `titulo` varchar(255) NOT NULL,
         `descricao` text DEFAULT NULL,
         `concluida` tinyint(1) NOT NULL DEFAULT 0,
-        `data_criacao` timestamp NOT NULL DEFAULT current_timestamp(),
-        `data_conclusao` timestamp NULL DEFAULT NULL,
+        `data_criacao` date NOT NULL DEFAULT current_timestamp(),
+        `data_conclusao` date DEFAULT NULL,
         PRIMARY KEY (`id`)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
       ```
