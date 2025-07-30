@@ -55,7 +55,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 2.  **Navegue até a pasta do projeto:**
     ```bash
-    cd nome-da-pasta-do-projeto
+    C:\xampp\htdocs\gerenciador-tarefas
     ```
 
 3.  **Instale as dependências do PHP:**
@@ -64,7 +64,7 @@ Siga os passos abaixo para rodar o projeto localmente:
     ```
 
 4.  **Configure o Banco de Dados:**
-    - Crie um novo banco de dados no seu MySQL (pelo phpMyAdmin, por exemplo). Vamos chamá-lo de `gerenciador_tarefas_db`.
+    - Crie um novo banco de dados no seu MySQL (pelo phpMyAdmin, por exemplo). Vamos chamá-lo de `tarefas` SQL: CREATE DATABASE `tarefas`.
     - Importe o arquivo `.sql` com a estrutura da tabela. Se você não tem um, use o código abaixo para criar a tabela `gerenciador_tarefas`:
       ```sql
       CREATE TABLE `gerenciador_tarefas` (
